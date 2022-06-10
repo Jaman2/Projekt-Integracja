@@ -20,10 +20,10 @@ class WriteXML
     }
     function write($data)
     {
-        $filePath = "./files/Data" . $data[0]["Name"] . ".xml";
+        $filePath = "./files/Data" . $data["Name"] . ".xml";
 
         if ($data != null) {
-            $xml = (new WriteXML)->getXMLFromObjectsList($data[0], "<data/>");
+            $xml = (new WriteXML)->getXMLFromObjectsList($data, "<data/>");
             file_put_contents($filePath, $xml);
         }
     }

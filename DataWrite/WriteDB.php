@@ -26,8 +26,8 @@ class WriteDB
     {
         $database = new Database();
         $db = $database -> getConnection();
-        $name = $data[0]['Name'];
-        $datastr = implode(",", $data[0]["Data"]);
+        $name = $data['Name'];
+        $datastr = implode(",", $data["Data"]);
         $sql = "INSERT INTO data (name, data) VALUES ('" . $name . "', '" . $datastr . "')";
         if($db->query($sql) == true)
         {
