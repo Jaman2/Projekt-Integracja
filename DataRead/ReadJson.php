@@ -7,7 +7,7 @@ class ReadJson
     public function ReadData($fileName)
     {
         $filePath = "./files/" . $fileName;
-        $file = file_get_contents($filePath) or die("Pliku nie znaleziono!");
+        $file = file_get_contents($filePath) or die("File not found");
         $array = json_decode($file, true);
         if ($array["Name"]) {
             $name = $array["Name"];

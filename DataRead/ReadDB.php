@@ -1,5 +1,5 @@
 <?php
-//Takes nothing, reads from database with config below.
+//Takes nothing, reads from database with config in file WriteDB.php.
 class Read
 {
     private $dataTable = "data";

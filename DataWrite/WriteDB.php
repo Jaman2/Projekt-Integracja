@@ -1,10 +1,10 @@
 <?php
-
+//Config of DB connection.
 class Database
 {
-    private $host = 'localhost';
-    private $user = 'root';
-    private $password = "";
+    private $host = "localhost";
+    private $user = "Integracja";
+    private $password = "Integracja";
     private $database = "projekt";
 
     public function getConnection()
