@@ -25,7 +25,7 @@ echo "<br>";
 echo "Dane z API";
 echo "<br>";
 $api = new ReadAPI();
-var_dump($api->ReadData("UK"));
+var_dump($api->ReadData("IT"));
 echo "<br>";
 echo "<br>";
 echo "<br>";
