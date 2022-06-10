@@ -1,5 +1,5 @@
 <?php
-
+//Takes nothing, reads from database with config below.
 class Read
 {
     private $dataTable = "data";

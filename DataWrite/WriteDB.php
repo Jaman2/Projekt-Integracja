@@ -1,7 +1,5 @@
 <?php
 
-use Database as GlobalDatabase;
-
 class Database
 {
     private $host = 'localhost';

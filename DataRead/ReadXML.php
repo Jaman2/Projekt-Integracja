@@ -1,4 +1,6 @@
 <?php
+//Takes filename with file extension like: "DataItaly.xml"
+//!!!Handles only files created by WriteXML.php!!!
 class ReadXML
 {
     function ReadData($fileName)

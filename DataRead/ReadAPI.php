@@ -1,8 +1,8 @@
 <?php
 
-
 class ReadAPI
 {
+    //Takes short country names like PL, DE, IT etc.
     public function ReadData($shortenCountry)
     {
         $ch = curl_init();

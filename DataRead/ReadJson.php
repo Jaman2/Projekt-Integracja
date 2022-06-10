@@ -1,5 +1,7 @@
 <?php
 
+//Takes filename with file extension like: "DataItaly.json".
+//Handles Json files created by eurostat and by WriteJson.php.
 class ReadJson
 {
     public function ReadData($fileName)

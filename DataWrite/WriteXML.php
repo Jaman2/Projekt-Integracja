@@ -1,4 +1,5 @@
 <?php
+//Saves files as: "Data*country full name*.xml".
 class WriteXML
 {
     function getXMLFromObjectsList($array, $rootElement = null, $xml = null)
