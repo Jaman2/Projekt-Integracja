@@ -1,11 +1,11 @@
 <?php
-include_once './DataRead/ReadDB.php';
-include_once './DataRead/ReadJson.php';
-include_once './DataRead/ReadXML.php';
-include_once './DataRead/ReadAPI.php';
-include_once './DataWrite/WriteXML.php';
-include_once './DataWrite/WriteJson.php';
-include_once './DataWrite/WriteDB.php';
+include_once './dataRead/ReadDB.php';
+include_once './dataRead/ReadJson.php';
+include_once './dataRead/ReadXML.php';
+include_once './dataRead/ReadAPI.php';
+include_once './dataWrite/WriteXML.php';
+include_once './dataWrite/WriteJson.php';
+include_once './dataWrite/WriteDB.php';
 
 echo "dane z DB";
 echo "<br>";
