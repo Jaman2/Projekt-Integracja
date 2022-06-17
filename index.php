@@ -94,7 +94,7 @@ echo "<input type='button' value='Wczytaj dane z XMLa' onclick='LoadXML()'/>";
 <br>
 <?php
 $xml2 = new ReadXML();
-$XMLData = $xml2->ReadData("DataNorway.xml");
+$XMLData = $xml2->ReadData();
 //var_dump($xml2->ReadData("DataItaly.xml"));
 ?>
 Dane z każdego miesiąca dla państwa <span id="XMLCountryName"></span>
@@ -107,28 +107,28 @@ foreach($dates as $key => $value){
     echo "<br>| ";
     }
 }
-?>
-<br>
-<br>
-Zapis do JSON:
-<?php
-$json2 = new WriteJson();
-$json2->write($APIData[0]);
-?>
-<br>
-<br>
-Zapis do XML:
-<?php
-$xml = new WriteXML();
-$xml->write($APIData[0]);
-?>
-<br>
-<br>
-Zapis do bazy danych:
-<?php
-$db2 = new WriteDB();
-$db2->write($APIData[0]);
-?>
+// ?>
+// <br>
+// <br>
+// Zapis do JSON:
+// <?php
+// $json2 = new WriteJson();
+// $json2->write($APIData[0]);
+// ?>
+// <br>
+// <br>
+// Zapis do XML:
+// <?php
+// $xml = new WriteXML();
+// $xml->write($APIData[0]);
+// ?>
+// <br>
+// <br>
+// Zapis do bazy danych:
+// <?php
+// $db2 = new WriteDB();
+// $db2->write($APIData[0]);
+// ?>
 
 
 <script>

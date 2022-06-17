@@ -29,7 +29,7 @@ class WriteDB
         $db = $database -> getConnection();
         $db->begin_transaction();
         $name = $data['Name'];
-        $datastr = implode(",", $data["Data"]);
+        $sqlData = "INSERT INTO data("; /// work ehre
         $sql = "INSERT INTO data (name, data) VALUES ('" . $name . "', '" . $datastr . "')";
         $checkquery ="SELECT id FROM data WHERE Name = '".$name."'";
         $result = $db->query($checkquery);

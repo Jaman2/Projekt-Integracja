@@ -3,6 +3,7 @@
 class Read
 {
     private $dataTable = "data";
+    private $countryTable = "country";
     public $id;
     public $name;
     public $data;
@@ -15,12 +16,7 @@ class Read
 
     function read()
     {
-        if ($this->id) {
-            $stmt = $this->conn->prepare("SELECT * FROM " . $this->dataTable . " WHERE ID = ?");
-            $stmt->bind_param("i", $this->id);
-        } else {
-            $stmt = $this->conn->prepare("SELECT * FROM " . $this->dataTable);
-        }
+        $stmt = $this->conn->prepare("SELECT * FROM " . $this->countryTable); ///zmiany
         $stmt->execute();
         $result = $stmt->get_result();
         return $result;

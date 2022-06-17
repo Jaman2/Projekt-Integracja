@@ -7,24 +7,27 @@ class WriteXML
         $_xml = $xml;
 
         if ($_xml === null) {
-            $_xml = new SimpleXMLElement($rootElement !== null ? $rootElement : "<data/>");
+            $_xml = new SimpleXMLElement($rootElement !== null ? $rootElement : "<Countries/>");
         }
         foreach ($array as $k => $v) {
-            $ks = "a".$k."";
+            if(is_numeric($k))
+            {
+                $k = "Country";
+            }
             if (is_array($v)) {
-                (new WriteXML)->getXMLFromObjectsList($v, $ks, $_xml->addChild($ks));
+                (new WriteXML)->getXMLFromObjectsList($v, $k, $_xml->addChild($k));
             } else {
-                $_xml->addChild($ks, $v);
+                $_xml->addChild($k, $v);
             }
         }
         return $_xml->asXML();
     }
     function write($data)
     {
-        $filePath = "./files/Data" . $data["Name"] . ".xml";
+        $filePath = "./files/Data.xml";
 
         if ($data != null) {
-            $xml = (new WriteXML)->getXMLFromObjectsList($data, "<data/>");
+            $xml = (new WriteXML)->getXMLFromObjectsList($data, "<Countries/>");
             file_put_contents($filePath, $xml);
             echo "saved data to XML";
         }
