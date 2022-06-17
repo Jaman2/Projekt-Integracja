@@ -7,9 +7,15 @@ include_once './dataWrite/WriteXML.php';
 include_once './dataWrite/WriteJson.php';
 include_once './dataWrite/WriteDB.php';
 
-
+$api = new ReadAPI();
+$data3 = $api->ReadData("IT");
+var_dump($data3);
 $xml = new ReadXML();
 $data = $xml -> ReadData();
 var_dump($data);
-$Wxml = new WriteXML();
-$Wxml -> write($data);
+$Wjson = new WriteJson();
+$Wjson -> write($data3);
+$json = new ReadJson();
+$data2 = $json -> ReadData();
+echo"<br/> data from json <br/>";
+var_dump($data2);

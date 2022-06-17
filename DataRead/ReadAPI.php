@@ -14,12 +14,15 @@ class ReadAPI
         $array = json_decode($result, true);
         $name = array_values([$array["dimension"]["geo"]["category"]["label"]][0])[0];
         $data = array_values($array["value"]);
-        for ($i = 0; $i < count($data); $i++) {
-            $data[$i] = strval($data[$i]);
+        $dates = array_values($array["dimension"]["time"]["category"]["label"]);
+        $data2 = array();
+        for ($i = 0; $i < count($data); $i++){
+            $dates[$i] = "Date" . substr($dates[$i],0,4) . "_" . substr($dates[$i],5,7);
+            $data2[$dates[$i]] = strval($data[$i]);
         }
         $temp = [
             "Name" => $name,
-            "Data" => $data
+            "Data" => $data2
         ];
         $output = array($temp);
         return $output;
