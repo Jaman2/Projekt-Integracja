@@ -1,7 +1,7 @@
 <?php
 
 //Takes filename with file extension like: "DataItaly.json" or not, when so it reads Data.json.
-//Handles Json files created by eurostat when given fielname or by WriteJson.php when not.
+//Handles Json files created by eurostat when given filename or by WriteJson.php when not.
 class ReadJson
 {
     public function ReadData($fileName = null)
