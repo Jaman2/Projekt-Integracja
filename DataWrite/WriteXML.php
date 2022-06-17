@@ -26,6 +26,7 @@ class WriteXML
         if ($data != null) {
             $xml = (new WriteXML)->getXMLFromObjectsList($data, "<data/>");
             file_put_contents($filePath, $xml);
+            echo "saved data to XML";
         }
     }
 }

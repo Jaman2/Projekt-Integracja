@@ -7,5 +7,6 @@ class WriteJson
         $filePath = "./files/Data" . $data["Name"] . ".json";
         $json = json_encode($data);
         file_put_contents($filePath, $json);
+        echo "saved data to JSON";
     }
 }

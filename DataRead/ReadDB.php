@@ -10,6 +10,7 @@ class Read
     public function __construct($db)
     {
         $this->conn = $db;
+
     }
 
     function read()
@@ -32,9 +33,11 @@ class ReadDataDB
     {
         $database = new Database();
         $db = $database->getConnection();
+        $db->begin_transaction();
         $dataDB = new Read($db);
         $dataDB->id = (isset($_GET['id']) && $_GET['id']) ? $_GET['id'] : '0';
         $result = $dataDB->read();
+        $db->commit();
         if ($result->num_rows > 0) {
             $dataRecords = array();
             $dataRecords["countries"] = array();
