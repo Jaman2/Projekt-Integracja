@@ -99,6 +99,7 @@ ALTER TABLE `country`
 --
 -- Indeksy dla tabeli `rental_values`
 --
+
 ALTER TABLE `rental_values`
   ADD PRIMARY KEY (`DataID`),
   ADD UNIQUE KEY `DataID` (`DataID`);
